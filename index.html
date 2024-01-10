@@ -1,38 +1,29 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8"/>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-        <link rel="stylesheet" href="styles.css">
-        <script src="scripts.js"></script>
-        
-    </head>
 
-    <body>
-        <div class="container">
-            <div class="container__item landing-page-container">
-                <div class="content__wrapper">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
+</head>
 
-                  <header class="header">
+<body>
+    <div class="container">
+        <div class="container__item landing-page-container">
+            <div class="content__wrapper">
+                <header class="header">
                     <div class="menu-icon header__item">
                         <span class="menu-icon__line"></span>
-                        
                     </div>
                     <nav class="nav-menu">
-                      <ul class="menu-list">
-                        
-                          <li><a href="#home">home</a></li>
-                          <li><a href="about.html">about</a></li>
-                          <li><a href="#contact">contact</a></li>
-                      </ul>
-                  </nav>
-                    
-                    
-
-                    
-                    
-                
+                        <ul class="menu-list">
+                            <li><a href="#home">home</a></li>
+                            <li><a href="about.html">about</a></li>
+                            <li><a href="#contact">contact</a></li>
+                        </ul>
+                    </nav>
                     <h1 class="heading header__item heading-as-link">VIVIENNE</h1>
-                
                     <ul class="social-container header__item">
                         <li class="social__icon social__icon--li">
                             <a href="https://www.linkedin.com/in/buzatu" target="_blank">
@@ -50,71 +41,64 @@
                             </a>
                         </li>
                     </ul>
-                    
-                    
-                    
                 </header>
                 <p class="coords" id="coordinates">N 49° 16' 35.173" / W 0° 42' 11.30"</p>
-
-                    <div class="ellipses-container">
-                        <h2 class="greeting">ONE</h2>
-                        <div class="ellipses ellipses__outer--thin">
-                            <div class="ellipses ellipses__orbit"></div>
-                        </div>
-                        <div class="ellipses ellipses__outer--thick"></div>
+                <div class="ellipses-container">
+                    <h2 class="greeting">ONE</h2>
+                    <div class="ellipses ellipses__outer--thin">
+                        <div class="ellipses ellipses__orbit"></div>
                     </div>
-                    <div class="scroller">
-                        <p class="page-title">home</p>
-
-                        <div class="timeline">
-                            <span class="timeline__unit"></span>
-                            <span class="timeline__unit timeline__unit--active"></span>
-                            <span class="timeline__unit"></span>
-                        </div>
+                    <div class="ellipses ellipses__outer--thick"></div>
+                </div>
+                <div class="scroller">
+                    <p class="page-title">home</p>
+                    <div class="timeline">
+                        <span class="timeline__unit"></span>
+                        <span class="timeline__unit timeline__unit--active"></span>
+                        <span class="timeline__unit"></span>
                     </div>
                 </div>
             </div>
-            <footer class="footer">
-                <div class="footer__copyright">
-                    <!-- Sezione di copyright -->
-                    <p>&copy; 2024 Vivienne.one. Tutti i diritti riservati.</p>
-                </div>
-            </footer>
         </div>
-        <script>
-            // Aggiungi un evento di click all'elemento h1
-            document.addEventListener('DOMContentLoaded', function() {
-                const headingAsLink = document.querySelector('.heading-as-link');
-                headingAsLink.addEventListener('click', function() {
-                    window.location.href = 'index.html'; // Reindirizza a index.html
-                });
+        <footer class="footer">
+            <div class="footer__copyright">
+                <!-- Sezione di copyright -->
+                <p>&copy; 2024 Vivienne.one. Tutti i diritti riservati.</p>
+            </div>
+        </footer>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const headingAsLink = document.querySelector('.heading-as-link');
+            headingAsLink.addEventListener('click', function () {
+                window.location.href = 'index.html'; // Reindirizza a index.html
             });
-        </script>
-        <script>
-            function updateCoordinates() {
-                var coordinatesElement = document.getElementById('coordinates');
-                
-                var latitudeDegrees = 49 + Math.floor(Math.random() * 10);
-                var latitudeMinutes = 16 + Math.floor(Math.random() * 5); // Variazione leggera nei minuti
-                
-                var longitudeDegrees = 0 + Math.floor(Math.random() * 10);
-                var longitudeMinutes = 42 + Math.floor(Math.random() * 5); // Variazione leggera nei minuti
-                
-                var latitudeSeconds = Math.floor(Math.random() * 100); // Genera un valore a due cifre per i secondi
-                while (latitudeSeconds === 26 || latitudeSeconds === 61) {
-                    latitudeSeconds = Math.floor(Math.random() * 100);
-                }
-                
-                var longitudeSeconds = Math.floor(Math.random() * 100); // Genera un valore a due cifre per i secondi
-                while (longitudeSeconds === 26 || longitudeSeconds === 61) {
-                    longitudeSeconds = Math.floor(Math.random() * 100);
-                }
-                
-                coordinatesElement.textContent = 'N ' + latitudeDegrees + '° ' + latitudeMinutes + '\' ' + (latitudeSeconds < 10 ? '0' + latitudeSeconds : latitudeSeconds) + '" / W ' + longitudeDegrees + '° ' + longitudeMinutes + '\' ' + (longitudeSeconds < 10 ? '0' + longitudeSeconds : longitudeSeconds) + '"';
+        });
+
+        function updateCoordinates() {
+            var coordinatesElement = document.getElementById('coordinates');
+
+            var latitudeDegrees = 49 + Math.floor(Math.random() * 10);
+            var latitudeMinutes = 16 + Math.floor(Math.random() * 5); // Variazione leggera nei minuti
+
+            var longitudeDegrees = 0 + Math.floor(Math.random() * 10);
+            var longitudeMinutes = 42 + Math.floor(Math.random() * 5); // Variazione leggera nei minuti
+
+            var latitudeSeconds = Math.floor(Math.random() * 100); // Genera un valore a due cifre per i secondi
+            while (latitudeSeconds === 26 || latitudeSeconds === 61) {
+                latitudeSeconds = Math.floor(Math.random() * 100);
             }
-    
-            setInterval(updateCoordinates, 100);
-        </script>
-        
-    </body>
+
+            var longitudeSeconds = Math.floor(Math.random() * 100); // Genera un valore a due cifre per i secondi
+            while (longitudeSeconds === 26 || longitudeSeconds === 61) {
+                longitudeSeconds = Math.floor(Math.random() * 100);
+            }
+
+            coordinatesElement.textContent = 'N ' + latitudeDegrees + '° ' + latitudeMinutes + '\' ' + (latitudeSeconds < 10 ? '0' + latitudeSeconds : latitudeSeconds) + '" / W ' + longitudeDegrees + '° ' + longitudeMinutes + '\' ' + (longitudeSeconds < 10 ? '0' + longitudeSeconds : longitudeSeconds) + '"';
+        }
+
+        setInterval(updateCoordinates, 100);
+    </script>
+</body>
+
 </html>
