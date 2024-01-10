@@ -206,11 +206,14 @@ textarea:hover {
   display: none;
   position: absolute;
   width: 100%;
-  text-align: left;
+  text-align: center;
   opacity: 0;
   transform: translateY(-20px);
   z-index: -1;
   animation-duration: 0.3s;
+  backdrop-filter: blur(3px); /* Applica l'effetto di sfocatura */
+  background-color: rgb(255, 255, 255); /* Colore dello sfondo sfocato */
+  
 }
 
 .nav-menu.open {
@@ -232,6 +235,7 @@ textarea:hover {
 }
 
 .menu-list li {
+  
   font-family: 'Playfair Display', serif;
   letter-spacing: 0.5rem;
   margin-bottom: 10px;
@@ -239,6 +243,7 @@ textarea:hover {
 }
 
 .menu-list li a {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Imposta un'ombra con offset x di 2px, offset y di 2px, sfumatura di 4px e colore nero con trasparenza */
   text-decoration: none;
   color: #000;
   transition: color 0.3s ease-in-out;
