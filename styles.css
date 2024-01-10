@@ -498,6 +498,49 @@ textarea:hover {
   top: 50%;
   transform: translateY(-50%);
 }
+
+@media (max-width: 768px) {
+  .ellipses-container {
+    width: 30rem;
+    height: 30rem;
+    top: 6.5rem;
+  }
+
+  .ellipses-container .greeting {
+    top: 7.6rem;
+    left: 2.5rem;
+    letter-spacing: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .ellipses-container .greeting:after {
+    width: 0.2rem;
+    height: 0.2rem;
+    top: -0.45rem;
+    left: -2.55rem;
+  }
+
+  .ellipses__outer--thin {
+    animation-duration: 10s; /* Adjusting animation duration for smaller screens */
+  }
+
+  .ellipses__orbit {
+    width: 1.5rem;
+    height: 1.5rem;
+    top: 3rem;
+    right: 4.5rem;
+  }
+
+  .ellipses__orbit:before {
+    width: 0.5rem;
+    height: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+
+
 .scroller {
   width: 7.5rem;
   display: inline-block;
