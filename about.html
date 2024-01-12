@@ -88,25 +88,7 @@
             });
         });
     </script>
-    <script>
-        function updateCoordinates() {
-            var coordinatesElement = document.getElementById('coordinates');
-            var latitudeDegrees = 49 + Math.floor(Math.random() * 10);
-            var latitudeMinutes = 16 + Math.floor(Math.random() * 5); // Variazione leggera nei minuti
-            var longitudeDegrees = 0 + Math.floor(Math.random() * 10);
-            var longitudeMinutes = 42 + Math.floor(Math.random() * 5); // Variazione leggera nei minuti
-            var latitudeSeconds = Math.floor(Math.random() * 100); // Genera un valore a due cifre per i secondi
-            while (latitudeSeconds === 26 || latitudeSeconds === 61) {
-                latitudeSeconds = Math.floor(Math.random() * 100);
-            }
-            var longitudeSeconds = Math.floor(Math.random() * 100); // Genera un valore a due cifre per i secondi
-            while (longitudeSeconds === 26 || longitudeSeconds === 61) {
-                longitudeSeconds = Math.floor(Math.random() * 100);
-            }
-            coordinatesElement.textContent = 'N ' + latitudeDegrees + '° ' + latitudeMinutes + '\' ' + (latitudeSeconds < 10 ? '0' + latitudeSeconds : latitudeSeconds) + '" / W ' + longitudeDegrees + '° ' + longitudeMinutes + '\' ' + (longitudeSeconds < 10 ? '0' + longitudeSeconds : longitudeSeconds) + '"';
-        }
-        setInterval(updateCoordinates, 100);
-    </script>
+    
     <!-- animation -->
     <script>
         class TextScramble {
