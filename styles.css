@@ -617,7 +617,6 @@ textarea:hover {
 }
 .ellipses__outer--thin:after {
   content: "";
-  background-image: url('https://s29.postimg.org/5h0r4ftkn/ellipses_dial.png');
   background-repeat: no-repeat;
   background-position: center;
   top: 0;
