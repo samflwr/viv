@@ -17,7 +17,58 @@ h1 {
 
 
 
-
+@media only screen and (max-width: 1000px) {
+  h2 {
+    font-family: 'Asterina', sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    color: #333333f3;
+    text-align: center;
+    letter-spacing: 0px;
+    margin-bottom: 20px;
+  }
+  
+  h2 .number {
+    color: #00000088;
+    font-weight: bold;
+  }
+  
+  .separator {
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    margin: 0.5em 0;
+    border: none;
+  }
+  
+  .avanti-container {
+    display: flex;
+  }
+  
+  .avanti {
+    text-decoration: none;
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    cursor: pointer;
+    outline: none;
+    margin-left: auto;
+  }
+  
+  .indietro {
+    text-decoration: none;
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    cursor: pointer;
+    outline: none;
+    margin-right: auto;
+  }
+}
 
 
 h2 {
@@ -47,6 +98,7 @@ h2 .number {
   display: flex;
 }
 .avanti {
+  text-decoration: none;
   background: transparent;
   border: none;
   padding: 0;
@@ -58,6 +110,7 @@ h2 .number {
 }
 
 .indietro {
+  text-decoration: none;
   background: transparent;
   border: none;
   padding: 0;
