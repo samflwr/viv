@@ -15,6 +15,15 @@ h1 {
   /* Aggiungi altri formati del font se necessario per supportare diversi browser */
 }
 
+
+
+
+
+
+
+
+
+
 @import url(https://fonts.googleapis.com/css?family=Roboto+Mono:100);
 .aboutAnimation {
   font-weight: 100;
@@ -130,14 +139,15 @@ textarea:hover::focus:-ms-placeholder {
 
 #form {
   position: relative;
-  width: 500px;
+  width: 90%; /* Utilizza il 90% della larghezza del viewport */
+  
   margin: 50px auto 100px auto;
 }
 
 input {
   font-family: 'Lato', sans-serif;
   font-size: 0.875em;
-  width: 470px;
+  width: 90%; /* Utilizza il 100% della larghezza del contenitore */
   height: 50px;
   padding: 0px 15px 0px 15px;
   background: transparent;
@@ -154,8 +164,8 @@ input:hover {
 }
 
 textarea {
-  width: 470px;
-  max-width: 470px;
+  width: 90%; /* Utilizza il 100% della larghezza del contenitore */
+  max-width: 90%; /* Imposta una larghezza massima del 100% */
   height: 110px;
   max-height: 110px;
   padding: 15px;
@@ -174,7 +184,7 @@ textarea:hover {
 }
 
 #submit {
-  width: 502px;
+  width: 20%; /* Utilizza il 100% della larghezza del contenitore */
   padding: 0;
   margin: -5px 0px 0px 0px;
   font-family: 'Lato', sans-serif;
@@ -190,11 +200,18 @@ textarea:hover {
   color: #e2dedb;
 }
 
-
-
-
-
-
+/* Media query per dispositivi con larghezza inferiore a 768px (ad es. telefoni) */
+@media (max-width: 768px) {
+  #form {
+    width: 90%; /* Regola la larghezza per dispositivi mobili */
+  }
+  
+  input,
+  textarea,
+  #submit {
+    width: 90%; /* Utilizza il 100% della larghezza per dispositivi mobili */
+  }
+}
 
 
 /* Animazione per far apparire il menu */
