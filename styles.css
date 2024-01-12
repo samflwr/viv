@@ -20,6 +20,57 @@ h1 {
 
 
 
+h2 {
+  font-family: 'Asterina', sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  color: #333333f3;
+  text-align: center;
+  letter-spacing: 0px;
+  margin-bottom: 20px;
+}
+h2 .number {
+  color: #00000088;
+  font-weight: bold;
+}
+.separator {
+  width: 100%; /* Personalizza la lunghezza della linea */
+  height: 1px; /* Personalizza lo spessore della linea */
+  background-color: black; /* Personalizza il colore della linea */
+  margin: 0.5em 0; /* Aggiungi uno spazio sopra e sotto la linea */
+  border: none; /* Rimuovi il bordo della linea */
+}
+
+
+.avanti-container {
+  margin-top: -30px;
+  display: flex;
+}
+.avanti {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: 18px; /* Imposta la dimensione del testo a tuo piacimento */
+  cursor: pointer;
+  outline: none; /* Rimuovi la bordatura attorno al bottone quando è selezionato */
+  margin-left: auto; /* Allinea a destra */
+}
+
+.indietro {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: 18px; /* Imposta la dimensione del testo a tuo piacimento */
+  cursor: pointer;
+  outline: none; /* Rimuovi la bordatura attorno al bottone quando è selezionato */
+  margin-right: auto; /* Allinea a sinistra */
+}
+
+
+
+
 
 
 
@@ -288,7 +339,7 @@ textarea:hover {
 }
 
 .menu-list li a:hover {
-  color: #ff0000;
+  color: #196083;
 }
 
 
@@ -379,7 +430,7 @@ textarea:hover {
 
 
 .social-container .social__icon a:hover {
-  color: red; /* Cambia il colore al passaggio del mouse */
+  color: #196083; /* Cambia il colore al passaggio del mouse */
 }
 
 .menu-icon__line {
@@ -474,7 +525,7 @@ textarea:hover {
   letter-spacing: 4rem;
   font-size: 2.2rem;
   font-weight: 400;
-  opacity: 0.5;
+  opacity: 0.4;
 }
 .ellipses-container .greeting:after {
   content: '';
