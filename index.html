@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vivienne AI by Samir Buzatu (XVMIR): Beyond limits, adaptive, predictive, empathetic, ethical, self-aware, offers personalized support, sparks creativity. Join the transformative Vivienne experience for a future where AI aligns with human ideals.">
+    <meta name="keywords" content="Vivienne AI, Samir Buzatu, XVMIR, Buzatu Samir, Buzatu, Ionut Buzatu, artificial intelligence, machine learning, AI development, intelligent systems, technology, innovations, digital intelligence, coding AI">
+    <meta name="author" content="samir buzatu">
+    <meta name="author" content="xvmir">
+    <meta name="author" content="buzatu samir">
+    <meta property="og:title" content="vivienne AI by samir suzatu">
+    <meta property="og:description" content="Beyond limits, adaptive, predictive, empathetic, ethical, and innovative AI by Samir Buzatu (XVMIR). Join the transformative Vivienne experience.">
+    <meta property="og:image" content="URL_dell_immagine_da_condividere">
+    <meta property="og:url" content="https://vivienne.one">
+    <meta name="robots" content="index, follow">
+
+    <title>vivienne - ai</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="container__item landing-page-container">
+            <div class="content__wrapper">
+                <header class="header">
+                    <div class="menu-icon header__item">
+                        <span class="menu-icon__line"></span>
+                    </div>
+                    <nav class="nav-menu">
+                        <ul class="menu-list">
+                            <li><a href="/">home</a></li>
+                            <li><a href="about">about</a></li>
+                            <li><a href="contact">contact</a></li>
+                        </ul>
+                    </nav>
+                    <h1 class="heading header__item heading-as-link animationTitle">vivienne</h1>
+                    <ul class="social-container header__item">
+                        <li class="social__icon social__icon--li">
+                            <a href="https://www.linkedin.com/in/buzatu" target="_blank" rel="noopener"">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </li>
+                        <li class="social__icon social__icon--site">
+                            <a href="https://www.xvmir.com" target="_blank" rel="noopener">
+                                <i class="fas fa-globe"></i>
+                            </a>
+                        </li>
+                        <li class="social__icon social__icon--ig">
+                            <a href="https://www.instagram.com/xvmir" target="_blank" rel="noopener">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </header>
+                
+                <p class="coords" id="coordinates">N 49° 16' 35.173" / W 0° 42' 11.30"</p>
+                
+                <div class="ellipses-container">
+                    <h2 class="greeting">AI</h2>
+                    
+                    <div class="ellipses ellipses__outer--thin">
+                        <div class="ellipses ellipses__orbit"></div>
+                    </div>
+                    <div class="ellipses ellipses__outer--thick"></div>
+                </div>
+                
+                <div class="scroller">
+                    <div class="title-wrapper">
+                      <p class="page-title">one</p>
+                    </div>
+                    <div class="timeline">
+                      <span class="timeline__unit"></span>
+                      <span class="timeline__unit timeline__unit--active"></span>
+                      <span class="timeline__unit"></span>
+                    </div>
+                  </div>
+                
+                <div class="containerr">
+                    <div class="aboutAnimation"></div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footer__copyright">
+                <!-- Sezione di copyright -->
+                <p>&copy; 2024 Vivienne.one. Tutti i diritti riservati.</p>
+            </div>
+        </footer>
+    </div>
+    <script>
+        // Aggiungi un evento di click all'elemento h1
+        document.addEventListener('DOMContentLoaded', function() {
+            const headingAsLink = document.querySelector('.heading-as-link');
+            headingAsLink.addEventListener('click', function() {
+                window.location.href = '/'; // Reindirizza a index.html
+            });
+        });
+    </script>
+    <!-- animation -->
+    <script>
+        function updateCoordinates() {
+            var coordinatesElement = document.getElementById('coordinates');
+            
+            var latitudeDegrees = 49 + Math.floor(Math.random() * 10);
+            var latitudeMinutes = 16 + Math.floor(Math.random() * 5); // Variazione leggera nei minuti
+            
+            var longitudeDegrees = 0 + Math.floor(Math.random() * 10);
+            var longitudeMinutes = 42 + Math.floor(Math.random() * 5); // Variazione leggera nei minuti
+            
+            var latitudeSeconds = Math.floor(Math.random() * 100); // Genera un valore a due cifre per i secondi
+            while (latitudeSeconds === 26 || latitudeSeconds === 61) {
+                latitudeSeconds = Math.floor(Math.random() * 100);
+            }
+            
+            var longitudeSeconds = Math.floor(Math.random() * 100); // Genera un valore a due cifre per i secondi
+            while (longitudeSeconds === 26 || longitudeSeconds === 61) {
+                longitudeSeconds = Math.floor(Math.random() * 100);
+            }
+            
+            coordinatesElement.textContent = 'N ' + latitudeDegrees + '° ' + latitudeMinutes + '\' ' + (latitudeSeconds < 10 ? '0' + latitudeSeconds : latitudeSeconds) + '" / W ' + longitudeDegrees + '° ' + longitudeMinutes + '\' ' + (longitudeSeconds < 10 ? '0' + longitudeSeconds : longitudeSeconds) + '"';
+        }
+
+        setInterval(updateCoordinates, 100);
+    </script>
+
+
+
+
+<script>
+    class TextScramble {
+        constructor(el) {
+            this.el = el
+            this.chars = '!<>-_\\/[]{}—=+*^?#________@$%&:;.,'
+            this.update = this.update.bind(this)
+        }
+        setText(newText) {
+            const oldText = this.el.innerText
+            const length = Math.max(oldText.length, newText.length)
+            const promise = new Promise((resolve) => this.resolve = resolve)
+            this.queue = []
+            for (let i = 0; i < length; i++) {
+                const from = oldText[i] || ''
+                const to = newText[i] || ''
+                const start = Math.floor(Math.random() * 40)
+                const end = start + Math.floor(Math.random() * 40)
+                this.queue.push({ from, to, start, end })
+            }
+            cancelAnimationFrame(this.frameRequest)
+            this.frame = 0
+            this.update()
+            return promise
+        }
+        update() {
+            let output = ''
+            let complete = 0
+            for (let i = 0, n = this.queue.length; i < n; i++) {
+                let { from, to, start, end, char } = this.queue[i]
+                if (this.frame >= end) {
+                    complete++
+                    output += to
+                } else if (this.frame >= start) {
+                    if (!char || Math.random() < 0.28) {
+                        char = this.randomChar()
+                        this.queue[i].char = char
+                    }
+                    output += `<span class="dud">${char}</span>`
+                } else {
+                    output += from
+                }
+            }
+            this.el.innerHTML = output
+            if (complete === this.queue.length) {
+                this.resolve()
+            } else {
+                this.frameRequest = requestAnimationFrame(this.update)
+                this.frame++
+            }
+        }
+        randomChar() {
+            return this.chars[Math.floor(Math.random() * this.chars.length)]
+        }
+    }
+    // ——————————————————————————————————————————————————
+    // Example
+    // ——————————————————————————————————————————————————
+    const phrases = [
+        'vivienne',
+        'v'
+    ]
+    const el = document.querySelector('.animationTitle')
+    const fx = new TextScramble(el)
+    let counter = 0
+    const next = () => {
+        const currentPhrase = phrases[counter];
+        fx.setText(currentPhrase).then(() => {
+            const delay = 150 + currentPhrase.length * 820; // Imposta un ritardo basato sulla lunghezza del testo
+            setTimeout(next, delay);
+        });
+        counter = (counter + 1) % phrases.length;
+    };
+    next();
+</script>
+</body>
+</html>
+
+
+
+
