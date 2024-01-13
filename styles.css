@@ -498,6 +498,7 @@ textarea:hover {
   background-color: #ffffff00; /* Aggiungi un colore di sfondo al menu */
   z-index: 1; /* Assicura che il menu sia sopra l'icona del menu */
   display: none; /* Nascondi inizialmente il menu */
+  display: block;
 }
 
 .header:hover .nav-menu {
