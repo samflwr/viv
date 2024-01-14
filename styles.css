@@ -387,13 +387,14 @@ textarea:hover {
   position: absolute;
   pointer-events: none;
   width: 100%;
+  height: 100rem;
   text-align: center;
   opacity: 0;
   transform: translateY(-20px);
   z-index: -1;
   animation-duration: 0.3s;
-  backdrop-filter: blur(3px); /* Applica l'effetto di sfocatura */
-  -webkit-backdrop-filter: blur(3px); /* Per Safari */
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
   background-color: rgb(255, 255, 255); /* Colore dello sfondo sfocato */
   
   
@@ -404,6 +405,7 @@ textarea:hover {
   z-index: 1;
   animation: fadeInMenu 0.3s forwards; /* Utilizza un'unica dichiarazione per l'animazione */
 }
+
 
 .nav-menu.close {
   animation: fadeOutMenu 0.3s forwards; /* Utilizza un'unica dichiarazione per l'animazione */
@@ -431,10 +433,13 @@ textarea:hover {
 }
 
 .menu-list li a:hover {
-  color: #196083;
+  color: rgb(143, 143, 143);
 }
 
-
+.heading-as-link:hover {
+  color: rgb(143, 143, 143); /* Cambia il colore per i link se necessario */
+  transition: color 0.3s ease-in-out;
+}
 
 .heading-as-link {
   font-family: "Asterina";
@@ -471,7 +476,7 @@ textarea:hover {
   background-position: bottom;
   overflow: hidden;
   font-family: 'Montserrat', sans-serif;
-  color: #09383e;
+  color: rgb(143, 143, 143);
 }
 .content__wrapper {
   width: 100%;
@@ -518,25 +523,25 @@ textarea:hover {
 
 .social-container .social__icon a {
   color: black; /* Colore di base */
-  transition: color 0.3s ease-in-out; /* Aggiungi una transizione al cambio di colore */
+  transition: color 0.2s ease-in-out; /* Aggiungi una transizione al cambio di colore */
 }
 
 
 .social-container .social__icon a:hover {
-  color: #196083; /* Cambia il colore al passaggio del mouse */
+  color: rgb(143, 143, 143); /* Cambia il colore al passaggio del mouse */
 }
 
 .menu-icon__line {
   width: 1.5rem;
   height: 0.2rem;
-  background-color: #0c383e;
+  background-color: #000000;
   display: block;
 }
 .menu-icon__line:before, .menu-icon__line:after {
   content: '';
   width: 1.5rem;
   height: 0.2rem;
-  background-color: #0c383e;
+  background-color: #000000;
   display: inline-block;
   position: relative;
 }
