@@ -1,0 +1,13 @@
+.container {
+    text-align: center;
+}
+
+.profile-data {
+    display: none;
+    margin-top: 20px;
+}
+
+.alert-primary {
+    background-color: #007bff;
+    color: #fff;
+}
