@@ -1166,9 +1166,9 @@ p {
   width: 4px;
   height: 100%;
   margin-left: -1.5px;
-  background: rgb(80,80,80);
-  background: -moz-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,1)), color-stop(100%,rgba(125,185,232,1)));
+  background: rgb(0, 0, 0);
+  background: -moz-linear-gradient(top, rgba(219, 21, 21, 0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,1)), color-stop(100%,rgb(157, 69, 9)));
   background: -webkit-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
   background: -o-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
   background: -ms-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
@@ -1212,7 +1212,7 @@ p {
 .flag {
   position: relative;
   display: inline;
-  background: rgb(174, 174, 174);
+  background: rgb(0, 0, 0);
   padding: 6px 10px;
   border-radius: 5px;
   font-family: 'Asterina', sans-serif;
@@ -1245,9 +1245,9 @@ p {
   width: 12px;
   height: 12px;
   margin-top: -10px;
-  background: #fff;
+  background: #e2dfd3;
   border-radius: 10px;
-  border: 4px solid rgb(109, 109, 109);
+  border: 4px solid rgb(0, 0, 0);
   z-index: 10;
 }
 
@@ -1264,7 +1264,7 @@ p {
   width: 0;
   margin-top: -8px;
   border: solid transparent;
-  border-left-color: #AEAEAE;
+  border-left-color: #000000;
   border-width: 8px;
   pointer-events: none;
 }
@@ -1278,17 +1278,17 @@ p {
   width: 0;
   margin-top: -8px;
   border: solid transparent;
-  border-right-color:#AEAEAE;
+  border-right-color:#000000;
   border-width: 8px;
   pointer-events: none;
 }
 
 .time-wrapper {
   display: inline;
-  text-shadow: 2px 0px 4px rgba(0, 0, 0, 0.4);
+  /*text-shadow: 2px 0px 4px rgba(0, 0, 0, 0.4);*/
   line-height: 1em;
   font-size: 0.66666em;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   vertical-align: middle;
 }
 
@@ -1304,7 +1304,8 @@ p {
   border-radius: 4px;
   display: inline-block;
   padding: 4px 6px;
-  background: rgb(193, 193, 193);
+  background: #E2DFD3;
+  box-shadow: 0px 3px 14px rgba(0, 0, 0, 0.2);
 }
 
 .desc {
@@ -1322,107 +1323,106 @@ p {
 /* ================ timeline-about Media Queries ================ */
 
 @media screen and (max-width: 660px) {
+      .timeline-about {
+        width: 100%;
+        padding: 4em 0 1em 0;
+      }
 
-.timeline-about {
- 	width: 100%;
-	padding: 4em 0 1em 0;
-}
+      .timeline-about li {
+        padding: 2em 0;
+      }
 
-.timeline-about li {
-	padding: 2em 0;
-}
+      .direction-l,
+      .direction-r {
+        float: none;
+        width: 100%;
 
-.direction-l,
-.direction-r {
-	float: none;
-	width: 100%;
+        text-align: center;
+      }
 
-	text-align: center;
-}
+      .flag-wrapper {
+        text-align: center;
+        color: #fff;
+      }
 
-.flag-wrapper {
-	text-align: center;
-  color: #fff;
-}
+      .flag {
+        background:#000000; /*C7C4BD*/
+        z-index: 15;
+      }
 
-.flag {
-	background:#C7C4BD;
-	z-index: 15;
-}
+      .direction-l .flag:before,
+      .direction-r .flag:before {
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        content: ' ';
+        display: block;
+        width: 12px;
+        height: 12px;
+        margin-left: -9px;
+        background: #E3DFD3;
+        border-radius: 10px;
+        border: 4px solid rgb(0, 0, 0);
+        z-index: 10;
+      }
 
-.direction-l .flag:before,
-.direction-r .flag:before {
-  position: absolute;
-  top: -30px;
-	left: 50%;
-	content: ' ';
-	display: block;
-	width: 12px;
-	height: 12px;
-	margin-left: -9px;
-	background: #fff;
-	border-radius: 10px;
-	border: 4px solid rgb(132, 123, 123);
-	z-index: 10;
-}
+      .direction-l .flag:after,
+      .direction-r .flag:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: -8px;
+        height: 0;
+        width: 0;
+        margin-left: -8px;
+        border: solid transparent;
+        border-bottom-color:  rgb(0, 0, 0);
+        border-width: 8px;
+        pointer-events: none;
+      }
 
-.direction-l .flag:after,
-.direction-r .flag:after {
-	content: "";
-	position: absolute;
-	left: 50%;
-	top: -8px;
-	height: 0;
-	width: 0;
-	margin-left: -8px;
-	border: solid transparent;
-	border-bottom-color:  rgb(174, 174, 174);
-	border-width: 8px;
-	pointer-events: none;
-}
+      .time-wrapper {
+        display: block;
+        position: relative;
+        margin: 4px 0 0 0;
+        z-index: 14;
+      }
 
-.time-wrapper {
-	display: block;
-	position: relative;
-	margin: 4px 0 0 0;
-	z-index: 14;
-}
+      .direction-l .time-wrapper {
+        float: none;
+      }
 
-.direction-l .time-wrapper {
-	float: none;
-}
+      .direction-r .time-wrapper {
+        float: none;
+      }
 
-.direction-r .time-wrapper {
-	float: none;
-}
+      .desc {
+        position: relative;
+        margin: 1em 0 0 0;
+        padding: 1em;
+        background: #E2DFD3;
+        -webkit-box-shadow:0 4px 8px rgba(0, 0, 0, 0.1);
+        -moz-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+        
+        z-index: 15;
+      }
 
-.desc {
-	position: relative;
-	margin: 1em 0 0 0;
-	padding: 1em;
-	background: #E2DFD3;
-	-webkit-box-shadow: 0 0 1px rgba(0,0,0,0.20);
-	-moz-box-shadow: 0 0 1px rgba(0,0,0,0.20);
-  border-radius: 10px;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
-	
-  z-index: 15;
-}
-
-.desc:hover {
-  transform: scale(1.05);
-}
+      .desc:hover {
+        transform: scale(1.05);
+      }
 
 
-.direction-l .desc,
-.direction-r .desc {
-	position: relative;
-	margin: 1em 1em 0 1em;
-	padding: 1em;
-	
-  z-index: 15;
-}
+      .direction-l .desc,
+      .direction-r .desc {
+        position: relative;
+        margin: 1em 1em 0 1em;
+        padding: 1em;
+        
+        z-index: 15;
+      }
 
 }
 
