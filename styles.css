@@ -1148,7 +1148,7 @@ p {
 
 
 
-.timeline {
+.timeline-about {
   position: relative;
   width: 660px;
   margin: 0 auto;
@@ -1157,7 +1157,7 @@ p {
   list-style-type: none;
 }
 
-.timeline:before {
+.timeline-about:before {
   position: absolute;
   left: 50%;
   top: 0;
@@ -1177,11 +1177,11 @@ p {
   z-index: 5;
 }
 
-.timeline li {
+.timeline-about li {
   padding: 1em 0;
 }
 
-.timeline li:after {
+.timeline-about li:after {
   content: "";
   display: block;
   height: 0;
@@ -1319,16 +1319,16 @@ p {
   margin: 1em 0 0 0.75em;
 }
 
-/* ================ Timeline Media Queries ================ */
+/* ================ timeline-about Media Queries ================ */
 
 @media screen and (max-width: 660px) {
 
-.timeline {
+.timeline-about {
  	width: 100%;
 	padding: 4em 0 1em 0;
 }
 
-.timeline li {
+.timeline-about li {
 	padding: 2em 0;
 }
 
