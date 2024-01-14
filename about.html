@@ -79,23 +79,33 @@
                 <div class="card-container">
                     <div class="card">
                         <div class="card-content">
-                            <h2>un viaggio nell'eccellenza</h2>
-                            <p>benvenuti nel mio regno di esplorazione sofisticata.</p>
+                            <h2>a journey into excellence</h2>
+                            <p>welcome to my realm of sophisticated exploration.</p>
                         </div>
                     </div>
                     <div class="card">
                         <div class="card-content">
-                            <h2>l'alchimia dell'innovazione</h2>
-                            <p>esplorate la mia comunità di menti illuminate. qui, l'innovazione diviene un'arte sottile. unitevi a noi per scoprire le personalità dietro a idee straordinarie che plasmeranno il mondo con distinzione.</p>
+                            <h2>the alchemy of innovation</h2>
+                            <p>explore my community of enlightened minds. here, innovation becomes a subtle art. join us to discover the personalities behind extraordinary ideas that will shape the world with distinction.</p>
                         </div>
                     </div>
                     <div class="card">
                         <div class="card-content">
-                            <h2>costruire un futuro raffinato</h2>
-                            <p>la collaborazione è il tessuto del futuro. lavoriamo insieme con aziende e individui per creare soluzioni che rispecchiano l'eleganza della trasformazione positiva, contribuendo a plasmare un futuro senza eguali.</p>
+                            <h2>building a refined future</h2>
+                            <p>collaboration is the fabric of the future. we work together with companies and individuals to create solutions that reflect the elegance of positive transformation, contributing to shaping an unparalleled future.</p>
                         </div>
                     </div>
+                    
                 </div>
+                <form id="registration-form">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required>
+            
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+            
+                    <button type="submit">Invia</button>
+                </form>
             </div>
         </div>
         <footer class="footer">
@@ -245,5 +255,60 @@
             displayNextPhrase();
         });
     </script>
+
+
+
+
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
+        // TODO: Aggiungi gli SDK necessari per Firebase
+        const firebaseConfig = {
+            apiKey: "AIzaSyCOzVepHAUWTv4dLEjonhGlEUXxuTM4k00",
+            authDomain: "vivienne-e1d8e.firebaseapp.com",
+            projectId: "vivienne-e1d8e",
+            storageBucket: "vivienne-e1d8e.appspot.com",
+            messagingSenderId: "396488839453",
+            appId: "1:396488839453:web:413e162cca5d0d6cc991f4",
+            measurementId: "G-BL79JZ94X8"
+        };
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
+
+    <!-- Dopo l'inizializzazione di Firebase -->
+    <script type="module">
+        import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+        const registrationForm = document.getElementById("registration-form");
+
+        registrationForm.addEventListener("submit", async (event) => {
+            event.preventDefault();
+
+            // Ottieni i dati dal modulo
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+
+            // Ottieni un riferimento al tuo database Firestore
+            const db = getFirestore();
+
+            try {
+                // Aggiungi i dati al tuo database
+                const docRef = await addDoc(collection(db, "utenti"), {
+                    name: name,
+                    email: email
+                });
+
+                console.log("Dati inviati con successo, ID documento:", docRef.id);
+
+                // Puoi fare altre azioni qui, come mostrare un messaggio di successo all'utente
+            } catch (error) {
+                console.error("Errore durante l'aggiunta dei dati:", error);
+                // Puoi fare altre azioni qui, come mostrare un messaggio di errore all'utente
+            }
+        });
+    </script>
+
 </body>
 </html>
