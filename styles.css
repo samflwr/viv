@@ -1071,13 +1071,6 @@ Main components
 
 
 
-
-
-
-
-
-
-
 .card-container {
   display: flex;
   flex-wrap: wrap;
@@ -1313,7 +1306,7 @@ p {
 .desc {
   margin: 1em 0.75em 0 0;
   color: #666666;
-  font-size: 0.77777em;
+  font-size: 1em;
   font-style: italic;
   line-height: 1.5em;
 }
@@ -1328,6 +1321,13 @@ p {
       .timeline-about {
         width: 100%;
         padding: 4em 0 1em 0;
+      }
+      .desc {
+        margin: 1em 0.75em 0 0;
+        color: #666666;
+        font-size: 1em;
+        font-style: italic;
+        line-height: 1.5em;
       }
 
       .timeline-about li {
