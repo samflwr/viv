@@ -23,8 +23,10 @@ h1 {
   border: none;
 }
 
-
-@media only screen and (max-width: 1000px) {
+h2 {
+  text-align: center;
+}
+@media only screen and (max-width: 1800px) {
   h2 {
     font-family: 'Asterina', sans-serif;
     font-size: 1em;
@@ -45,7 +47,7 @@ h1 {
     background-color: black;
     margin: 0.5em auto; /* Imposta il margine orizzontale su 'auto' */
     border: none;
-}
+  }
   .separator {
     width: 100%;
     height: 1px;
