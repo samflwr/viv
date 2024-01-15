@@ -374,7 +374,8 @@
         // Funzione per cambiare la frase manualmente o attraverso i bottoni
         function changePhrase(change) {
             counter = (counter + change + phrases.length) % phrases.length;
-            remainingTime=0;
+            manualChange = true; // Imposta il flag su true quando il cambio è manuale
+            remainingTime = 0;
             displayNextPhrase();
         }
 
@@ -394,8 +395,15 @@
 
                     if (remainingTime <= 0) {
                         clearInterval(countdownInterval);
-                        counter = (counter + 1) % phrases.length;
-                        displayNextPhrase();
+
+                        if (!manualChange) {
+                            // Se il cambio non è manuale, passa automaticamente alla frase successiva
+                            counter = (counter + 1) % phrases.length;
+                            displayNextPhrase();
+                        } else {
+                            // Se il cambio è manuale, reimposta il flag su false
+                            manualChange = false;
+                        }
                     }
                 }, 100);
             });
