@@ -89,7 +89,7 @@ h2 {
   font-size: 1em;
   font-weight: bold;
   color: #333333f3;
-  text-align: center;
+  
   letter-spacing: 0px;
   margin-bottom: 20px;
 }
@@ -1433,4 +1433,113 @@ p {
       margin: 1em 4em 0 4em;
   }
 
+}
+
+
+
+
+
+
+policy{
+  font-family: 'Arial', sans-serif;
+}
+
+
+/* Stile del titolo principale */
+policy h1 {
+  color: #000000;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: left;
+}
+
+/* Stile degli sottotitoli delle sezioni */
+policy h2 {
+  font-family: 'Arial', sans-serif;
+  text-align: left;
+  color: #000000;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Stile dei sottotitoli più piccoli */
+policy h3 {
+  color: #000000;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+policy h4 {
+  color: #000000;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Stile della linea di separazione tra le sezioni */
+policy hr.separator {
+  border: 1px solid #ddd;
+  margin: 20px 0;
+}
+
+/* Stile del testo del corpo */
+policy p {
+  line-height: 1.6;
+}
+
+/* Stile dei link */
+policy a {
+  color: #000000;
+  text-decoration: none;
+  transition: color 0.3s; /* Aggiunge una transizione al cambio di colore */
+}
+
+/* Effetto di sottolineatura quando il link è in hover */
+policy a:hover {
+  text-decoration: underline;
+}
+
+/* Stile del riquadro di avviso o note speciali */
+policy .alert {
+  background-color: #e7b6b6;
+  color: #721c24;
+  padding: 15px;
+  border: 1px solid #a47176;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* Stile della lista numerata o puntata */
+policy ol, policy ul {
+  margin-bottom: 15px;
+}
+
+/* Stile degli elementi della lista */
+policy li {
+  margin-bottom: 5px;
+}
+
+/* Stile per la sezione di consenso dei cookie o avvertimenti simili */
+policy .cookie-consent {
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+/* Stile per la barra di accettazione dei cookie */
+policy .cookie-consent-accept {
+  background-color: #286c9f;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Effetto di cambio colore quando si passa sopra la barra di accettazione dei cookie */
+policy .cookie-consent-accept:hover {
+  background-color: #1c4966;
 }
