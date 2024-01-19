@@ -1619,3 +1619,27 @@ policy .cookie-consent-accept:hover {
   line-height: 20px;
   font-size: 1.4rem;
 }
+
+
+
+
+@media screen and (max-width: 600px) {
+  .text__error {
+    margin-top: -35px;
+  
+    line-height: 30px;
+    font-size: 1.45rem;
+  }
+  .text__link {
+    margin-top: 5px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 1.2rem;
+  }
+}
+
+
+
+
+
+
