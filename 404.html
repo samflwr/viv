@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" lang="en" content="Vivienne AI by Samir Buzatu (XVMIR): Beyond limits, adaptive, predictive, empathetic, ethical, self-aware, offers personalized support, sparks creativity. Join the transformative Vivienne experience for a future where AI aligns with human ideals.">
+    <meta name="description" lang="it" content="Esplora il mondo innovativo di Vivienne AI di Samir Buzatu (XVMIR) - Oltre i limiti, adattiva, predittiva, empatica, etica e autoconsapevole, offre supporto personalizzato e stimola la creatività. Unisciti all'esperienza trasformativa di Vivienne per un futuro in cui l'IA si allinea agli ideali umani.">
+    <meta name="keywords" content="Vivienne AI, Samir Buzatu, XVMIR, Buzatu Samir, Buzatu, Ionut Buzatu, artificial intelligence, machine learning, AI development, intelligent systems, technology, innovations, digital intelligence, coding AI">
+    <meta name="author" content="samir buzatu">
+    <meta name="author" content="xvmir">
+    <meta name="author" content="buzatu samir">
+    <meta property="og:title" content="vivienne AI by samir suzatu">
+    <meta property="og:description" content="Beyond limits, adaptive, predictive, empathetic, ethical, and innovative AI by Samir Buzatu (XVMIR). Join the transformative Vivienne experience.">
+    <meta property="og:image" content="URL_dell_immagine_da_condividere">
+    <meta property="og:url" content="https://vivienne.one">
+    <meta name="robots" content="index, follow">
+
+    <title>Error 404 - Page Not Found</title>
+    <link rel="canonical" href="https://vivienne.one/error-404">
+    <link rel="icon" href="image/viv(icon).jpg" type="image/jpeg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="container__item error-page-container">
+            <div class="content__wrapper">
+                <header class="header">
+                    <div class="menu-icon header__item">
+                        <span class="menu-icon__line"></span>
+                    </div>
+                    <nav class="nav-menu">
+                        <ul class="menu-list">
+                            <li><a href="/">home</a></li>
+                            <li><a href="about">about</a><div class="new-badge">new</div></li> 
+                            <li><a href="contact">contact</a></li>
+                        </ul>
+                    </nav>
+                    
+                    <h1 class="heading header__item heading-as-link">vivienne</h1>
+                    
+                    <ul class="social-container header__item">
+                        <li class="social__icon social__icon--li">
+                            <a href="https://www.linkedin.com/in/buzatu" target="_blank" rel="noopener">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </li>
+                        <li class="social__icon social__icon--site">
+                            <a href="https://www.xvmir.com" target="_blank" rel="noopener">
+                                <i class="fas fa-globe"></i>
+                            </a>
+                        </li>
+                        <li class="social__icon social__icon--ig">
+                            <a href="https://www.instagram.com/xvmir" target="_blank" rel="noopener">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </header>
+                <div class="centrato">
+                    <div class="text__error" data-text="404 page not found"></div>
+                    <div class="text__link"><a href="/"data-text="click here to go home"></a></div>
+                </div>
+                
+                
+                
+                <footer class="footer">
+                    <div class="footer__copyright">
+                        <p>&copy; 2024 <a style="color: #365c7a;" href="/">Vivienne.one</a>. All rights reserved. <a style="color: #365c7a;" href="privacy-policy">Privacy Policy</a></p>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function setCharAt(str, index, chr) {
+            if (index > str.length - 1) return str;
+            return str.substr(0, index) + chr + str.substr(index + 1);
+        }
+
+        var characters = 'abcdefghijklmnopqrstuvwxyz1234567890-=+<>,./?[{()}]!@#$%^&*~`\|'.split('');
+
+        var progress404 = 0;
+        var total404 = document.querySelector('.text__error').getAttribute('data-text').length;
+
+        var progressLink = 0;
+        var totalLink = document.querySelector('.text__link a').getAttribute('data-text').length;
+
+        var scrambleInterval = setInterval(function () {
+            var string404 = document.querySelector('.text__error').getAttribute('data-text');
+            var stringLink = document.querySelector('.text__link a').getAttribute('data-text');
+
+            for (var i = 0; i < total404; i++) {
+                if (i >= progress404) {
+                    string404 = setCharAt(string404, i, characters[Math.round(Math.random() * (characters.length - 1))]);
+                }
+            }
+
+            for (var i = 0; i < totalLink; i++) {
+                if (i >= progressLink) {
+                    stringLink = setCharAt(stringLink, i, characters[Math.round(Math.random() * (characters.length - 1))]);
+                }
+            }
+
+            document.querySelector('.text__error').textContent = string404;
+            document.querySelector('.text__link a').textContent = stringLink;
+        }, 1000 / 60);
+
+        setTimeout(function () {
+            var revealInterval = setInterval(function () {
+                if (progress404 < total404) {
+                    progress404++;
+                } else if (progressLink < totalLink) {
+                    progressLink++;
+                } else {
+                    clearInterval(revealInterval);
+                    clearInterval(scrambleInterval);
+                }
+            }, 50);
+        }, 1000);
+    </script>
+</body>
+</html>
