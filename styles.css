@@ -11,12 +11,12 @@ h1 {
 }
 @font-face {
   font-family: 'Asterina';
-  src: url('asterina.otf') format('opentype');
+  src: url('fonts/asterina.otf') format('opentype');
   /* Aggiungi altri formati del font se necessario per supportare diversi browser */
 }
 @font-face {
   font-family: 'Stangith';
-  src: url('stangith.otf') format('opentype');
+  src: url('fonts/stangith.otf') format('opentype');
   /* Aggiungi altri formati del font se necessario per supportare diversi browser */
 }
 
@@ -1109,19 +1109,15 @@ p {
 }
 
 /* Media query per dispositivi con larghezza massima di 800px (tablet) */
-@media (max-width: 800px) {
-  .card {
-    width: calc(50% - 40px);
-  }
-}
+
 
 /* Media query per dispositivi con larghezza massima di 600px (dispositivi mobili) */
-@media (max-width: 600px) {
+@media (max-width: 1100px) {
   .card {
     width: calc(100% - 40px);
+    transition: 0.4s linear;
   }
 }
-
 
 
 
@@ -1623,6 +1619,10 @@ policy .cookie-consent-accept:hover {
 
 
 
+
+
+
+
 @media screen and (max-width: 600px) {
   .text__error {
     margin-top: -35px;
@@ -1638,8 +1638,187 @@ policy .cookie-consent-accept:hover {
   }
 }
 
+@media screen and (max-width: 600px) {
+  .footer__copyright a[href="privacy-policy"],
+  .footer__copyright a[href="terms&conditions"] {
+      display: block; /* Imposta il link su una nuova riga su dispositivi mobili */
+      margin-top: 5px; /* Aggiunge un po' di spazio tra i link */
+  }
+}
 
 
 
 
 
+.user-profile {
+  position: relative;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 300px;
+  max-height: 260px; /* Altezza massima iniziale */
+  aspect-ratio: 1;
+  background: #ffffff00;
+  border-radius: 3px;
+  display: flex;
+  border-radius: 23px;
+  overflow: hidden;
+  box-shadow: 5px 5px 20px 1px rgba(0, 0, 0, 0.286);
+  transition: 0.4s linear;
+}
+
+@media screen and (max-width: 1100px) {
+  .user-profile {
+    transition: 0.4s linear;
+    width: calc(100% - 40px);
+    height: 270px;
+  }
+  .user-profile:hover {
+    width: calc(102% - 40px);
+    height: 270px;
+  }
+}
+
+
+
+.user-profile .profile-left {
+	position: relative;
+	width: 60%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 30px;
+}
+
+.user-profile .profile-left > div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: #86776a;
+}
+
+.user-profile .profile-left .profile-info {
+	padding-top: 20px;
+}
+
+.user-profile .profile-left .profile-info h2 {
+	font-size: 15px;
+}
+
+.user-profile .profile-left .profile-info p {
+	font-size: 12px;
+}
+
+.user-profile .profile-left .profile-buttons {
+	padding-top: 4px;
+	gap: 10px;
+}
+
+.user-profile .profile-left .profile-buttons button {
+	width: 100px;
+	background: transparent;
+	border: 1px solid #786450;
+	border-radius: 100vw;
+	padding: 7px;
+	font-weight: 700;
+	font-size: 11px;
+	color: #000000;
+	cursor: pointer;
+	transition: all 0.2s linear;
+}
+
+.user-profile .profile-left .profile-buttons button:hover {
+	color: #fff;
+	background: #000000;
+}
+
+.user-profile .profile-left .img-border {
+	position: absolute;
+	top: 24px;
+	width: 80px;
+	height: 80px;
+	border-right: 1px solid transparent;
+	border-left: 1px solid #786450;
+	border-top: 1px solid #786450;
+	border-bottom: 1px solid #786450;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: transform 1.5s ease-in-out;
+}
+
+.user-profile .profile-left .img-border:hover {
+	transform: rotate(-360deg);
+}
+
+.user-profile .profile-left .img-border .inner-border {
+	position: absolute;
+	top: 2px;
+	width: 74px;
+	height: 74px;
+	border-left: 1px solid transparent;
+	border-right: 1px solid #000000;
+	transition: transform 1.5s ease-in-out;
+}
+
+.user-profile .profile-left .img-border .inner-border:hover {
+	transform: rotate(720deg);
+}
+
+.user-profile .profile-left img {
+	width: 90px;
+	border-radius: 50%;
+  transition: 0.23s linear;
+}
+.user-profile .profile-left img:hover {
+  cursor: pointer;
+	width: 95px;
+	border-radius: 50%;
+}
+
+.user-profile .profile-right {
+	width: 40%;
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+}
+
+.user-profile .profile-right > div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+  border-radius: 2px;
+	flex-grow: 1;
+	color: #ffffff;
+	background: #000000;
+	cursor: pointer;
+	transition: 0.23s linear;
+}
+
+.user-profile .profile-right > div h2,
+.user-profile .profile-right > div p {
+    margin: 5px; /* Rimuovi il margine predefinito di h* e p */
+}
+
+.user-profile .profile-right > div:hover {
+  transition: 0.23s linear;
+	color: #ffffff;
+	background: #403f3e;
+}
+
+.user-profile .profile-right > div p {
+	font-size: 12px;
+}
+.user-profile h1,
+.user-profile h2,
+.user-profile h3,
+.user-profile h4,
+.user-profile h5,
+.user-profile h6 {
+	margin: 0;
+	padding: 0;
+}
+.user-profile p {
+  /* Altri stili per paragrafi all'interno di .user-profile */
+  font-size: 14px; /* Esempio di stile per i paragrafi */
+}
