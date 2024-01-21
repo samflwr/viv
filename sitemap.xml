@@ -17,7 +17,17 @@
 	<priority>0.80</priority>
 </url>
 <url>
+	<loc>https://vivienne.one/faq</loc>
+	<lastmod>2024-01-15T17:45:26+01:00</lastmod>
+	<priority>0.80</priority>
+</url>
+<url>
 	<loc>https://vivienne.one/privacy-policy</loc>
+	<lastmod>2024-01-15T17:45:26+01:00</lastmod>
+	<priority>0.40</priority>
+</url>
+<url>
+	<loc>https://vivienne.one/terms&conditions</loc>
 	<lastmod>2024-01-15T17:45:26+01:00</lastmod>
 	<priority>0.40</priority>
 </url>
