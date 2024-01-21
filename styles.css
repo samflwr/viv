@@ -1657,7 +1657,7 @@ policy .cookie-consent-accept:hover {
   left: 50%;
   transform: translate(-50%);
   width: 300px;
-  max-height: 260px; /* Altezza massima iniziale */
+  max-height: 330px; /* Altezza massima iniziale */
   aspect-ratio: 1;
   background: #ffffff00;
   border-radius: 3px;
@@ -1672,11 +1672,11 @@ policy .cookie-consent-accept:hover {
   .user-profile {
     transition: 0.4s linear;
     width: calc(100% - 40px);
-    height: 270px;
+    height: 290px;
   }
+  
   .user-profile:hover {
     width: calc(102% - 40px);
-    height: 270px;
   }
 }
 
@@ -1712,7 +1712,7 @@ policy .cookie-consent-accept:hover {
 
 .user-profile .profile-left .profile-buttons {
 	padding-top: 4px;
-	gap: 10px;
+	gap: 5px;
 }
 
 .user-profile .profile-left .profile-buttons button {
