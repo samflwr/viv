@@ -1836,7 +1836,6 @@ policy .cookie-consent-accept:hover {
 
 .faq p {
   display: none;
-  padding: 0px 45px 0px 0px;
   text-align: left;
   justify-content: center;
   text-align: justify;
@@ -1852,6 +1851,7 @@ policy .cookie-consent-accept:hover {
   width: 100%;
 }
 .faq{
+  padding: 8px 45px 8px 8px;
   width: 100%;
 }
 .card.faq:hover {
