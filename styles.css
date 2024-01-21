@@ -1081,6 +1081,7 @@ Main components
   display: flex;
   flex-wrap: wrap;
   justify-content: center; /* Modifica qui per centrare le card sulla pagina */
+  transition: 0.3s linear;
 }
 
 .card {
@@ -1821,4 +1822,48 @@ policy .cookie-consent-accept:hover {
 .user-profile p {
   /* Altri stili per paragrafi all'interno di .user-profile */
   font-size: 14px; /* Esempio di stile per i paragrafi */
+}
+
+
+
+
+
+
+
+
+
+
+
+.faq p {
+  display: none;
+  padding: 0px 0px 0px 0px;
+  text-align: left;
+  justify-content: center;
+  text-align: justify;
+  opacity: 0;
+  transition: 0.3s linear;
+}
+
+.card-content.faq {
+  max-height: 35px; /* Imposta un'altezza massima iniziale */
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.4s linear;
+  width: 100%;
+}
+.faq{
+  width: 100%;
+}
+.card.faq:hover {
+  transition: transform 0.3s linear;
+  transform: scale(1.05);
+}
+
+.card-content.faq.expanded {
+  max-height: 500px; /* Imposta un'altezza massima sufficientemente grande */
+}
+
+.card-content.faq.expanded p {
+  display: block;
+  opacity: 1;
 }
