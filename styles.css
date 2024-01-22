@@ -1875,3 +1875,185 @@ policy .cookie-consent-accept:hover {
     transform: scale(1.00);
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Hero Section */
+.hero {
+  background: url("hehttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_JLnH6ZsXDqcwd8jchqpvFk3jffISdTaa9xQtlK_fBQ&s") center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.hero h2 {
+  font-size: 3em;
+}
+
+.hero p {
+  text-align: left;
+  justify-content: center;
+  text-align: justify;
+  font-size: 1.5em;
+  margin-top: 20px;
+}
+
+/* About Section */
+.about {
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 15px;
+  padding: 80px 0;
+}
+
+.about h2 {
+  text-align: center;
+  font-size: 3em;
+}
+
+.about p {
+  font-size: 1.2em;
+}
+
+/* Skills Section */
+.skills {
+  background-color: #a42b2b00;
+  border-radius: 15px;
+  padding: 80px 0;
+}
+
+.skills h2 {
+  color:#000000;
+  text-align: center;
+  font-size: 3em;
+}
+
+.skills h3 {
+  font-family: "Asterina";
+  color:#000000;
+}
+.skills p {
+  color:#000000;
+}
+
+
+.skills-list {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.skill {
+  text-align: left;
+  justify-content: center;
+  text-align: justify;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.skill:hover {
+  transform: scale(1.1);
+}
+/* Skills Section - Mobile Styles */
+@media only screen and (max-width: 768px) {
+  .skills {
+    padding: 40px 0;
+  }
+
+  .skills h2 {
+    text-align: center;
+    font-size:3 em;
+  }
+
+  .skills-list {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .skill {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+}
+
+/* Projects Section */
+.projects {
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 15px;
+  padding: 80px 0;
+}
+
+.projects h2 {
+  text-align: center;
+  font-size: 3em;
+  
+}
+
+.project {
+  margin-top: 30px;
+}
+
+.project h3 {
+  font-size: 1.8em;
+  font-family: "Asterina";
+  color:#000000;
+}
+
+.project p {
+  
+  color:#000000;
+  font-size: 1.2em;
+}
+
+/* Contact Section */
+.contact {
+  background: url('contact-background.jpg') center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.contact h2 {
+  font-size: 2.5em;
+}
+
+.contact-info {
+  margin-top: 30px;
+}
+
+.contact-info p {
+  font-size: 1.2em;
+}
+
+.contact-info a {
+  color: #000000;
+}
+

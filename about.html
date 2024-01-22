@@ -126,7 +126,7 @@
                             <p>developer / designer</p>
                         </div>
                         <div class="profile-buttons">
-                            <button class="message">more</button>
+                            <button class="message" onclick="openMePage()">more</button>
                             <button class="message" onclick="openContactPage()">message</button>
                         </div>
                     </div>
@@ -529,6 +529,10 @@
         function openContactPage() {
             // Redirect alla pagina contact.html
             window.location.href = 'contact';
+        }
+        function openMePage() {
+            // Redirect alla pagina contact.html
+            window.location.href = 'me';
         }
     </script>
 
